@@ -18,20 +18,21 @@
         
         <item
             android:id="@+id/action_license_view"
+            android:icon="@drawable/ic_menu_document"
             android:orderInCategory="200"
             android:showAsAction="always"
             android:title="@string/action_license_view" />
         
         <item
             android:id="@+id/itemBackup"
-            android:icon="@android:drawable/ic_menu_save"
+            android:icon="@drawable/ic_menu_marquee_download"
             android:orderInCategory="100"
             android:showAsAction="ifRoom|collapseActionView"
             android:title="@string/action_csv_export"/>
         
         <item
             android:id="@+id/itemRestore"
-            android:icon="@android:drawable/ic_menu_delete"
+            android:icon="@drawable/ic_menu_marquee_upload"
             android:orderInCategory="100"
             android:showAsAction="ifRoom|collapseActionView"
             android:title="@string/action_csv_import"/>

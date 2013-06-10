@@ -1,3 +1,7 @@
 TankAssistent
 
 Learning Android
+
+Converting the Batch iconset to the Android Holo Light theme:
+using my converter script: 
+https://github.com/hstraub/various-scripts/blob/master/batch_iconset_convert.py
