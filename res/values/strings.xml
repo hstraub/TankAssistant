@@ -4,6 +4,9 @@
     <string name="action_options">Options</string>
     <string name="action_license_view">License</string>
     
+    <string name="action_csv_import">Restore</string>
+    <string name="action_csv_export">Save</string>
+    
     <string name="titlePrefs">Settings</string>
     <string name="titleBackup">Backup</string>
     <string name="titleRestore">Restore</string>
