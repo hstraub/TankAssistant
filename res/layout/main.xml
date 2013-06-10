@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical" >
+	
+	    <TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
+	        android:text="@string/text_DatenEingabe" />
+	    
+	    <LinearLayout
+	        android:id="@+id/relativeLayout1"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:weightSum="1.0" >
+	
+	        <TextView
+	            android:id="@+id/textLiter"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0.5"
+	            android:text="@string/liter_text" />
+	
+	        <EditText
+	            android:id="@+id/editLiter"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0.5"
+	            android:ems="10"
+	            android:inputType="numberDecimal" />
+	    </LinearLayout>
+	
+	    <LinearLayout
+	        android:id="@+id/relativeLayout2"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:weightSum="1.0" >
+	
+	        <TextView
+	            android:id="@+id/textPreis"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0.5"
+	            android:text="@string/preis_text" />
+	
+	        <EditText
+	            android:id="@+id/editPreis"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0.5"
+	            android:ems="10"
+	            android:inputType="numberDecimal" />
+	    </LinearLayout>
+	
+	    <LinearLayout
+	        android:id="@+id/relativeLayout3"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:weightSum="1.0" >
+	
+	        <TextView
+	            android:id="@+id/textKilometer"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0.5"
+	            android:text="@string/kilometer_text" />
+	
+	        <EditText
+	            android:id="@+id/editKilometer"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0.5"
+	            android:ems="10"
+	            android:inputType="numberDecimal" />
+	    </LinearLayout>
+	
+	    <TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
+	        android:text="@string/text_Standort" />
+	    
+	    <LinearLayout
+	        android:id="@+id/relativeLayout_Position"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:weightSum="1.0" >
+	
+	
+	        <TextView
+	            android:id="@+id/text_gpsLong"
+	           	android:layout_width="0dip"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0.3"
+	            android:text="@string/text_PositionLong" />
+	
+	        <TextView
+	            android:id="@+id/text_gpsLat"
+	           	android:layout_width="0dip"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0.3"
+	            android:text="@string/text_PositionLat" />
+	        
+	        <TextView
+	            android:id="@+id/text_gpsAcc"
+	           	android:layout_width="0dip"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0.2"
+	            android:text="@string/text_PositionAcc" />
+	        
+	        <TextView
+	            android:id="@+id/text_gpsProvider"
+	           	android:layout_width="0dip"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0.1"
+	            android:text="@string/text_PositionProvider" />
+
+	        <TextView
+	            android:id="@+id/text_gpsFixTime"
+	           	android:layout_width="0dip"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0.1"
+	            android:text="@string/text_PositionFixTime" />
+	        	        	        
+	    </LinearLayout>
+	    
+	    <TextView
+	        android:id="@+id/text_Adresse"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/text_Position" />
+	    
+	<LinearLayout
+	        android:id="@+id/relativeLayout6"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:weightSum="1.0" >
+	
+	        <Button
+	            android:id="@+id/buttonSave"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1.0"
+	            android:text="@string/save_text" />
+	    </LinearLayout>
+	<TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
+	        android:text="@string/externe_funktionen_text" />
+	
+	   	
+	   	<LinearLayout
+	        android:id="@+id/relativeLayout7"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:weightSum="1.0" >
+	    	
+	    	<TextView
+	        	android:id="@+id/textTankstellenSuche"
+	        	android:layout_height="wrap_content"
+	        	android:layout_width="fill_parent"
+	            android:layout_weight="0.3"
+	        	android:text="@string/tankstellensuche_text" />
+	   	    
+	    	<Button
+	    	    android:id="@+id/buttonSucheTankstelle"
+	    	    android:layout_width="fill_parent"
+	    	    android:layout_height="wrap_content"
+	    	    android:layout_weight="0.7"
+	    	    android:text="@string/searchButton_text" />
+	   	
+	    </LinearLayout>
+
+	   	<TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
+	        android:text="@string/history_text" />
+	
+	   	
+	   	<LinearLayout
+	        android:id="@+id/relativeLayoutHistory"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:weightSum="1.0" >
+	    	
+	    	<TextView
+	        	android:id="@+id/textDisplayData"
+	        	android:layout_height="wrap_content"
+	        	android:layout_width="fill_parent"
+	            android:layout_weight="0.3"
+	        	android:text="@string/displayData_text" />
+	   	    
+	    	<Button
+	    	    android:id="@+id/buttonDisplayData"
+	    	    android:layout_width="fill_parent"
+	    	    android:layout_height="wrap_content"
+	    	    android:layout_weight="0.7"
+	    	    android:text="@string/displayDataButton_text" />
+	   	
+	    </LinearLayout>
+	   	
+	   		   		
+	</LinearLayout>
+	
+</ScrollView>

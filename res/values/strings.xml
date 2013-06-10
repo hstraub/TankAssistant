@@ -1,0 +1,26 @@
+<resources>
+
+    <string name="app_name">TankAssistant</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="text_DatenEingabe">Dateneingabe</string>
+    <string name="liter_text">Liter getankt:</string>
+    <string name="preis_text">Dafür bezahlt:</string>
+    <string name="kilometer_text">Kilometer Stand:</string>
+    <string name="tankstellensuche_text">Suche Tankestelle</string>
+    <string name="externe_funktionen_text">Externe Funktionen</string>
+    <string name="save_text">Speichern</string>
+    <string name="searchButton_text">Los!</string>
+    <string name="text_Position">unbekannt</string>
+    <string name="text_PositionLong">null</string>
+    <string name="text_PositionLat">null</string>
+    <string name="text_PositionAcc">null</string>
+    <string name="text_Standort">Standort</string>
+    <string name="text_PositionProvider">null</string>
+    <string name="text_PositionFixTime">null</string>
+    <string name="history_text">History</string>
+    <string name="displayData_text">Zeige Daten</string>
+    <string name="displayDataButton_text">Los!</string>
+    
+</resources>
