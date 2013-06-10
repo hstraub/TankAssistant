@@ -7,6 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -84,43 +85,48 @@ public class CsvHelper {
     	}
     }
 
-//    	public void csvImport( ) {
-//        	DbHelper dbHelper;
-//        	SQLiteDatabase db;
-//        	int i = 0;
-//        	String directoryname = Environment.getExternalStorageDirectory( ) + File.separator + C_CSV_DIRNAME;
-//        	File directory = new File( directoryname );
-//        	String[] filenames = directory.list( );
-//        	Arrays.sort( filenames );
-//        	String filename = directoryname + File.separator + filenames[filenames.length - 1];	
-//
-//        	dbHelper = new DbHelper( this.context );
-//        	db = dbHelper.getWritableDatabase( );
-//        	db.delete(DbHelper.TABLE, "", null);    	
-//        	try {
-//    	    	CSVReader reader = new CSVReader(
-//    	    			new FileReader( filename ) );
-//    	    	String [] nextLine;
-//    	    	while( ( nextLine = reader.readNext( ) ) != null ) {
-//    	    		ContentValues values = new ContentValues( );
-//    	    		values.put( DbHelper.C_DATETIME, nextLine[0] );
-//    	    		values.put( DbHelper.C_GEWICHT, nextLine[1] );
-//    	    		db.insertOrThrow( DbHelper.TABLE, null, values );
-//    	    		i++;
-//    	    	}
-//        	} catch ( Exception e ){
-//        		Toast toast = Toast.makeText( this, "Fehler: " + e.getMessage( ), Toast.LENGTH_LONG );
-//        		toast.show( );
-//            }
-//        	db.close( );
-//
-//        	Toast.makeText( this, "Import von " + i + " Record von File: "
-//        			+ filename, Toast.LENGTH_LONG ).show( );
-//        	    	
-//        }
-//
-//    	
-//    }
-	
-	
+    public void csvImport( ) {
+        DbHelper dbHelper;
+        SQLiteDatabase db;
+        int i = 0;
+        String directoryname = Environment.getExternalStorageDirectory( ) + File.separator + C_CSV_DIRNAME;
+        File directory = new File( directoryname );
+        String[] filenames = directory.list( );
+        Arrays.sort( filenames );
+        String filename = directoryname + File.separator + filenames[filenames.length - 1];	
+
+        dbHelper = new DbHelper( this.context );
+        db = dbHelper.getWritableDatabase( );
+        db.delete(DbHelper.TABLE, "", null);    	
+        try {
+            ContentValues values = new ContentValues( );
+            CSVReader reader = new CSVReader(
+                    new FileReader( filename ) );
+
+            String [] nextLine;
+            while( ( nextLine = reader.readNext( ) ) != null ) {
+                values.put( DbHelper.C_TIMESTAMP, nextLine[0] );
+                values.put( DbHelper.C_KILOMETERSTAND, nextLine[1] );
+                values.put( DbHelper.C_PREIS, nextLine[2] );
+                values.put( DbHelper.C_LITER, nextLine[3] );
+                values.put( DbHelper.C_POS_LONG, nextLine[4] );
+                values.put( DbHelper.C_POS_LAT, nextLine[5] );
+                values.put( DbHelper.C_POS_ACC, nextLine[6] );
+                values.put( DbHelper.C_POS_FIXAGE, nextLine[7] );
+
+                db.insertOrThrow( DbHelper.TABLE, null, values );
+                i++;
+            }
+        } catch ( Exception e ){
+            Toast toast = Toast.makeText( this.context, "Fehler: " + e.getMessage( ), Toast.LENGTH_LONG );
+            toast.show( );
+        }
+        db.close( );
+
+        Toast.makeText( this.context, "Import von " + i + " Record von File: "
+                + filename, Toast.LENGTH_LONG ).show( );
+
+    }
+
+
 }

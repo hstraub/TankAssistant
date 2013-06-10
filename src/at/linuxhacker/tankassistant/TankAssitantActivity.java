@@ -81,7 +81,7 @@ public class TankAssitantActivity extends Activity implements LocationListener {
             csvHelper.csvExport( );
             return true;
         case R.id.itemRestore:
-            csvHelper.csvExport( );
+            csvHelper.csvImport( );
             return true;
     	default:
     		return false;
