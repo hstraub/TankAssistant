@@ -11,7 +11,7 @@
     <string name="app_name">TankAssistant</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main">TankAssistant</string>
     <string name="text_DatenEingabe">Dateneingabe</string>
     <string name="liter_text">Liter getankt:</string>
     <string name="preis_text">Dafür bezahlt:</string>
