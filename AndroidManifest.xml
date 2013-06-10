@@ -27,6 +27,8 @@
         
          <activity android:name=".DisplayData"
             android:label="Zeige Daten" />
+         
+         <activity android:name="LicenseActivity" />
         
     </application>
 

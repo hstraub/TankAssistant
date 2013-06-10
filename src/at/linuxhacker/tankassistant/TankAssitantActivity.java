@@ -25,6 +25,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
 public class TankAssitantActivity extends Activity implements LocationListener {
@@ -58,7 +60,24 @@ public class TankAssitantActivity extends Activity implements LocationListener {
     	this.setListeners( );
 
     }
-    
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.tankassistent_main, menu);
+        return true;
+    }
+ 
+    @Override
+    public boolean onMenuItemSelected(int featureId, MenuItem item) {
+    	switch( item.getItemId( ) ) {
+    	case R.id.action_license_view:
+    		Intent license = new Intent( this, LicenseActivity.class );
+    		startActivity( license );
+    		return true;
+    	default:
+    		return false;
+    	}
+    }
     private void initiateLocationThings( ) {
 
     	this.locationManager =
