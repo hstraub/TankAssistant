@@ -8,6 +8,20 @@
         android:title="@string/action_settings"/>
 
     <item
+        android:id="@+id/itemBackup"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom|collapseActionView"
+        android:title="save"
+        android:icon="@android:drawable/ic_menu_save"/>
+    
+    <item
+        android:id="@+id/itemRestore"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom|collapseActionView"
+        android:title="restore"
+        android:icon="@android:drawable/ic_menu_delete"/>
+    
+    <item
         android:id="@+id/menu_options"
         android:title="@string/action_options"
         android:orderInCategory="120"

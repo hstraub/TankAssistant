@@ -69,15 +69,26 @@ public class TankAssitantActivity extends Activity implements LocationListener {
  
     @Override
     public boolean onMenuItemSelected(int featureId, MenuItem item) {
-    	switch( item.getItemId( ) ) {
+        
+        CsvHelper csvHelper = new CsvHelper( this );
+        
+        switch( item.getItemId( ) ) {
     	case R.id.action_license_view:
     		Intent license = new Intent( this, LicenseActivity.class );
     		startActivity( license );
     		return true;
+        case R.id.itemBackup:
+            csvHelper.csvExport( );
+            return true;
+        case R.id.itemRestore:
+            csvHelper.csvExport( );
+            return true;
     	default:
     		return false;
     	}
+
     }
+    
     private void initiateLocationThings( ) {
 
     	this.locationManager =
